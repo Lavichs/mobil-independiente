@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IndependentWork_v23</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">
+        Добро пожаловать в приложение библиотеки
+    </string>
+    <string name="fr2">fragment 2</string>
+</resources>
