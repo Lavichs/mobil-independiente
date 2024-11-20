@@ -1,6 +1,5 @@
 package com.example.independentwork_v23;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -50,26 +49,27 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Contacts contacts = new Contacts();
+                setNewFragment(contacts);
+            }
+        });
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        Welcome welcome = new Welcome();
+        setNewFragment(welcome);
     }
 
     private void setNewFragment(Fragment fragment) {
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         ft.replace(R.id.MainFragment, fragment);
         ft.commit();
-    }
-
-    public void Catalog(View view) {
-        Intent intent = new Intent(this, Catalog.class);
-        startActivity(intent);
-    }
-
-    public void Record(View view) {
-        Intent intent = new Intent(this, Record.class);
-        startActivity(intent);
     }
 }

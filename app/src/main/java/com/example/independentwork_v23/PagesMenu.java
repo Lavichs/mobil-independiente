@@ -23,10 +23,26 @@ public class PagesMenu extends Fragment {
         btn7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        btn11 = rootView.findViewById(R.id.button11);
+        btn11.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent = new Intent(getActivity(), Catalog.class);
                 startActivity(intent);
             }
         });
+//        btn12 = rootView.findViewById(R.id.button12);
+//        btn12.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getActivity(), Record.class);
+//                startActivity(intent);
+//            }
+//        });
 //        return inflater.inflate(R.layout.fragment_pages_menu, container, false);
         return rootView;
     }
